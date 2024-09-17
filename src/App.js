@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Section1 from "./components/Section1";
+import Navi from "./components/Navi";
+import Section2 from "./components/Section2";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.theme);
@@ -9,9 +11,10 @@ function App() {
   }, []);
   return (
     <>
-      <section></section>
-      <Header theme={theme} setTheme={setTheme} />
-      <div>포트폴리오 올릴 예정</div>
+      <Navi theme={theme} setTheme={setTheme} />
+      <Section1 />
+
+      <Section2 />
     </>
   );
 }
