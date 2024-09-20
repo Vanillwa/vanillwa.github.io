@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Section1 from "./components/Section1";
 import Section2 from "./components/Section2";
@@ -8,6 +8,7 @@ import Section3 from "./components/Section3";
 import Menu from "./components/Menu";
 import { MenuToggle } from "./components/MenuToggle";
 
+// 사이드바 애니메이션
 function useMenuAnimation(isOpen) {
   const [scope, animate] = useAnimate();
 
@@ -28,22 +29,30 @@ function useMenuAnimation(isOpen) {
 }
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.theme);
-
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // 사이드바 state
   const scope = useMenuAnimation(isOpen);
+  const { scrollYProgress } = useScroll(); // 하단 스크롤 진행도
+  const menuRef = useRef();
 
-  const { scrollYProgress } = useScroll();
   useEffect(() => {
-    if (localStorage.theme === "dark") document.documentElement.classList.add("dark");
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
   }, []);
+
+  // 사이드바 외부 클릭시 닫히게
+  const handleClickOutside = (e) => {
+    if (!scope.current.contains(e.target)) setIsOpen(false);
+  };
+
   return (
     <>
-      {/* <Navi theme={theme} setTheme={setTheme} /> */}
       <div ref={scope}>
-        <Menu theme={theme} setTheme={setTheme} />
+        <Menu />
         <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       </div>
+
       <Section1 />
       <Section2 />
       <Section3 />
