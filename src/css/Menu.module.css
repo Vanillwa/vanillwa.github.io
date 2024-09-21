@@ -1,0 +1,46 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 350px;
+  background: var(--accent);
+  padding-top: 100px;
+  transform: translateX(-100%);
+  will-change: transform;
+  background-color: var(--color-nav-bg);
+  border-right: 1px solid var(--color-border);
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+.menu li {
+  color: var(--color-font);
+  display: block;
+  transform-origin: -20px 50%;
+  font-weight: bold;
+  font-size: 36px;
+  padding: 10px;
+  will-change: transform, opacity, filter;
+}
+
+.themeBtn {
+  border: none;
+  background: none;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: var(--color-font);
+}
+
+.blackBox {
+  width: 100%;
+  background-color: black;
+  height: 100%;
+}

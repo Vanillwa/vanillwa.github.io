@@ -1,0 +1,30 @@
+.sec {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.container {
+  padding: 120px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  font-size: 36px;
+}
+
+.rightBox {
+  width: 80%;
+}
+
+.slogan {
+  font-size: 24px;
+  font-weight: 600;
+}
