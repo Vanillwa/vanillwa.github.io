@@ -5,8 +5,9 @@ import Section2 from "./components/Section2";
 import { motion, stagger, useAnimate, useScroll } from "framer-motion";
 import "./css/App.css";
 import Section3 from "./components/Section3";
-import Menu from "./components/Menu";
+
 import { MenuToggle } from "./components/MenuToggle";
+import Menu from "./components/Menu";
 
 // 사이드바 애니메이션
 function useMenuAnimation(isOpen) {
@@ -32,7 +33,9 @@ function App() {
   const [isOpen, setIsOpen] = useState(false); // 사이드바 state
   const scope = useMenuAnimation(isOpen);
   const { scrollYProgress } = useScroll(); // 하단 스크롤 진행도
-  const menuRef = useRef();
+  const sec1Ref = useRef(null);
+  const sec2Ref = useRef(null);
+  const sec3Ref = useRef(null);
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
@@ -49,13 +52,18 @@ function App() {
   return (
     <>
       <div ref={scope}>
-        <Menu />
+        <Menu sec1Ref={sec1Ref} sec2Ref={sec2Ref} sec3Ref={sec3Ref} />
         <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       </div>
-
-      <Section1 />
-      <Section2 />
-      <Section3 />
+      <div ref={sec1Ref}>
+        <Section1 />
+      </div>
+      <div ref={sec2Ref}>
+        <Section2 />
+      </div>
+      <div ref={sec3Ref}>
+        <Section3 />
+      </div>
       <motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
     </>
   );
