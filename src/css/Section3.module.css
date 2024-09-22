@@ -1,14 +1,42 @@
 .sec {
   width: 100%;
-  height: 1500px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  background-color: var(--color-bg-sec3);
 }
 
 .container {
   padding: 120px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.item {
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 20%;
+  text-align: center;
+}
+
+.icon svg {
+  font-size: 48px;
+}
+
+.rightBox {
+  width: 50%;
+  height: 10px;
+}
+.bar {
+  height: 10px;
+  background-color: var(--color-font);
 }

@@ -1,5 +1,6 @@
 :root {
   --color-bg: whitesmoke;
+  --color-bg-sec3: #eee;
   --color-font: black;
   --color-nav-bg: white;
   --color-border: lightgray;
@@ -7,6 +8,7 @@
 
 html.dark {
   --color-bg: #222;
+  --color-bg-sec3: #111;
   --color-font: white;
   --color-nav-bg: #333;
   --color-border: #444;
@@ -16,6 +18,10 @@ ul,
 li {
   list-style: none;
   margin: 0;
+}
+
+body {
+  min-width: 320px;
 }
 
 section {
