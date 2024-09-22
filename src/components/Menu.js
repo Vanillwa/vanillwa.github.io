@@ -6,14 +6,14 @@ function Menu({ sec1Ref, sec2Ref, sec3Ref }) {
   const { theme, setTheme } = useThemeContext();
   const handleThemeChange = (e) => {
     e.stopPropagation();
-    if (theme === "dark") {
+    if (theme === "light") {
       setTheme(null);
       localStorage.removeItem("theme");
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("light");
     } else {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
+      setTheme("light");
+      localStorage.setItem("theme", "light");
+      document.documentElement.classList.add("light");
     }
   };
 
@@ -30,7 +30,7 @@ function Menu({ sec1Ref, sec2Ref, sec3Ref }) {
           <li>Projects</li>
           <li>
             <button className={styles.themeBtn} onClick={handleThemeChange}>
-              {theme === "dark" ? <GoMoon /> : <GoSun />}
+              {theme === "light" ? <GoSun /> : <GoMoon />}
             </button>
           </li>
         </ul>

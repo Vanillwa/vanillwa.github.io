@@ -13,18 +13,98 @@
 }
 
 .leftBox {
+  font-size: 64px;
+  font-weight: 600;
+  font-family: var(--font-title);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
-  font-size: 36px;
+  width: 25%;
 }
 
 .rightBox {
-  width: 80%;
+  width: 75%;
 }
 
 .slogan {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 600;
+  padding: 0 0 4px;
+  word-break: keep-all;
+}
+
+.content {
+  word-break: keep-all;
+}
+
+@media (max-width: 1280px) {
+  .leftBox {
+    width: 25%;
+    font-size: 48px;
+  }
+  .slogan {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 0 4px;
+  }
+  .content {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-flow: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .leftBox {
+    width: 100%;
+    font-size: 48px;
+  }
+
+  .rightBox {
+    width: 100%;
+    padding: 0 24px;
+    display: flex;
+    gap: 24px;
+  }
+  .slogan {
+    font-size: 24px;
+    padding: 0 0 4px;
+    text-align: right;
+  }
+  .content {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rightBox {
+    flex-flow: column;
+    gap: 4px;
+  }
+  .slogan {
+    font-size: 24px;
+    padding: 0 0 4px;
+    text-align: left;
+  }
+  .content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 80px 0;
+  }
+  .leftBox {
+    font-size: 36px;
+  }
+  .slogan {
+    font-size: 18px;
+  }
+  .content {
+    font-size: 14px;
+  }
 }

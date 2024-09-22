@@ -1,17 +1,42 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paperlogy-8ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
+  --color-bg: #222;
+  --color-bg-sec3: #181818;
+  --color-font: white;
+  --color-nav-bg: #333;
+  --color-border: #444;
+  --color-bar: linear-gradient(90deg, rgb(61, 61, 61) 0%, rgb(95, 95, 95) 100%);
+  --font-title: DungGeunMo;
+}
+
+html.light {
   --color-bg: whitesmoke;
   --color-bg-sec3: #eee;
   --color-font: black;
   --color-nav-bg: white;
   --color-border: lightgray;
-}
-
-html.dark {
-  --color-bg: #222;
-  --color-bg-sec3: #111;
-  --color-font: white;
-  --color-nav-bg: #333;
-  --color-border: #444;
+  --color-bar: linear-gradient(90deg, rgb(133, 133, 133) 0%, rgb(194, 194, 194) 100%);
+  --font-title: DungGeunMo;
 }
 
 ul,
@@ -21,6 +46,7 @@ li {
 }
 
 body {
+  font-family: "Pretendard-Regular";
   min-width: 320px;
 }
 

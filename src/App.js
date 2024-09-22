@@ -42,7 +42,7 @@ function App() {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  });
 
   // 사이드바 외부 클릭시 닫히게
   const handleClickOutside = (e) => {
@@ -51,12 +51,8 @@ function App() {
 
   return (
     <>
-      <div ref={scope}>
-        <Menu sec1Ref={sec1Ref} sec2Ref={sec2Ref} sec3Ref={sec3Ref} />
-        <MenuToggle toggle={() => setIsOpen(!isOpen)} />
-      </div>
       <div ref={sec1Ref}>
-        <Section1 />
+        <Section1 sec2Ref={sec2Ref} />
       </div>
       <div ref={sec2Ref}>
         <Section2 />
@@ -65,6 +61,10 @@ function App() {
         <Section3 />
       </div>
       <motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
+      <div ref={scope}>
+        <Menu sec1Ref={sec1Ref} sec2Ref={sec2Ref} sec3Ref={sec3Ref} />
+        <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+      </div>
     </>
   );
 }
