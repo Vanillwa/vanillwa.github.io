@@ -7,7 +7,7 @@
 }
 
 .container {
-  padding: 120px 0;
+  padding: 140px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -54,6 +54,7 @@
 
 @media (max-width: 1024px) {
   .container {
+    padding: 100px 0;
     flex-flow: column;
     align-items: center;
     gap: 18px;

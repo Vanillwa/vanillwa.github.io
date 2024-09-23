@@ -5,7 +5,6 @@ import { RiNextjsLine } from "react-icons/ri";
 import { SiMicrosoftazure, SiMongodb, SiMysql, SiOracle, SiSpring, SiSpringboot } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { motion } from "framer-motion";
-import { s } from "framer-motion/client";
 
 function Section3() {
   const icons = [

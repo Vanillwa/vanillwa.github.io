@@ -8,7 +8,8 @@
 }
 
 .container {
-  padding: 120px 0;
+  max-width: 1280px;
+  padding: 140px 48px;
 }
 
 .title {
@@ -16,18 +17,19 @@
   font-weight: 600;
   text-align: center;
   font-size: 64px;
-  padding: 0 0 24px;
+  padding: 0 0 36px;
 }
 
 .itemList {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
+  row-gap: 36px;
+  column-gap: 36px;
 }
 
 .item {
-  width: 50%;
-  padding: 24px 0;
+  width: calc(50% - 18px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,15 +53,16 @@
 }
 
 .rightBox {
-  width: 50%;
-  height: 10px;
+  width: 80%;
+  display: flex;
+  align-items: center;
 }
 
 .bar {
   position: relative;
-  height: 24px;
+  height: 28px;
   background: var(--color-bar);
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
 .proficiency {
@@ -75,12 +78,26 @@
   .title {
     font-size: 48px;
   }
+  .leftBox svg {
+    font-size: 42px;
+  }
+
+  .bar {
+    height: 24px;
+    border-radius: 12px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+    padding: 100px 48px;
+  }
+  .itemList {
+    gap: 24px;
+  }
   .item {
     width: 100%;
-    padding: 6px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +105,9 @@
 }
 
 @media (max-width: 768px) {
+  .itemList {
+    gap: 18px;
+  }
   .item {
     gap: 12px;
   }
@@ -98,8 +118,8 @@
     font-size: 15px;
   }
   .bar {
-    height: 18px;
-    border-radius: 9px;
+    height: 24px;
+    border-radius: 12px;
   }
   .proficiency {
     font-size: 18px;
@@ -108,20 +128,23 @@
 
 @media (max-width: 480px) {
   .container {
-    padding: 80px 0;
-  }
-  .itemList {
-    gap: 6px;
+    padding: 80px 24px;
   }
   .title {
     font-size: 36px;
+  }
+  .itemList {
+    gap: 14px;
+  }
+  .leftBox svg {
+    font-size: 32px;
   }
   .name {
     display: none;
   }
   .bar {
-    height: 14px;
-    border-radius: 7px;
+    height: 18px;
+    border-radius: 9px;
   }
   .proficiency {
     font-size: 14px;
