@@ -8,6 +8,7 @@ import Section3 from "./components/Section3";
 
 import { MenuToggle } from "./components/MenuToggle";
 import Menu from "./components/Menu";
+import Section4 from "./components/Section4";
 
 // 사이드바 애니메이션
 function useMenuAnimation(isOpen) {
@@ -25,7 +26,7 @@ function useMenuAnimation(isOpen) {
         ];
 
     animate([["path.top", { d: isOpen ? "M 3 16.5 L 17 2.5" : "M 2 2.5 L 20 2.5" }, { at: "<" }], ["path.middle", { opacity: isOpen ? 0 : 1 }, { at: "<" }], ["path.bottom", { d: isOpen ? "M 3 2.5 L 17 16.346" : "M 2 16.346 L 20 16.346" }, { at: "<" }], ...menuAnimations]);
-  }, [isOpen]);
+  }, [isOpen, animate]);
   return scope;
 }
 
@@ -36,6 +37,7 @@ function App() {
   const sec1Ref = useRef(null);
   const sec2Ref = useRef(null);
   const sec3Ref = useRef(null);
+  const sec4Ref = useRef(null);
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
@@ -60,9 +62,12 @@ function App() {
       <div ref={sec3Ref}>
         <Section3 />
       </div>
+      <div ref={sec4Ref}>
+        <Section4 />
+      </div>
       <motion.div className='progress-bar' style={{ scaleX: scrollYProgress }} />
       <div ref={scope}>
-        <Menu sec1Ref={sec1Ref} sec2Ref={sec2Ref} sec3Ref={sec3Ref} />
+        <Menu sec1Ref={sec1Ref} sec2Ref={sec2Ref} sec3Ref={sec3Ref} sec4Ref={sec4Ref} />
         <MenuToggle toggle={() => setIsOpen(!isOpen)} />
       </div>
     </>

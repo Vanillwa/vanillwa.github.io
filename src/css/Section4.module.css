@@ -1,0 +1,89 @@
+.sec {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.container {
+  max-width: 1024px;
+  padding: 140px 48px;
+}
+
+.title {
+  text-align: center;
+  color: var(--color-font);
+  font-size: 64px;
+  font-family: var(--font-title);
+  padding-bottom: 36px;
+}
+
+.itemList {
+  display: flex;
+  flex-flow: column;
+  gap: 48px;
+}
+
+.item {
+  height: 300px;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--color-pj);
+}
+
+.item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.imageBox {
+  width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contentBox {
+  width: 50%;
+  text-align: left;
+  padding: 24px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.item:nth-child(even) .contentBox {
+  text-align: right;
+}
+
+.itemTitle {
+  font-size: 36px;
+}
+
+.itemSubtitle {
+  font-size: 21px;
+}
+
+.itemTerm {
+  font-size: 15px;
+}
+
+.bottomGroup {
+  display: flex;
+  justify-content: space-between;
+  font-size: 36px;
+}
+
+.item:nth-child(even) .bottomGroup {
+  flex-flow: row-reverse;
+}
+
+.itemSkills {
+  display: flex;
+  gap: 12px;
+}
+
+.github {
+  display: flex;
+  gap: 12px;
+}
