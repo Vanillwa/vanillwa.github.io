@@ -4,6 +4,7 @@ import image_rut from "../images/RUT.png";
 import image_gng from "../images/Gang_and_Go.png";
 import { FaGithub, FaNodeJs, FaReact } from "react-icons/fa";
 import { SiJquery, SiMysql, SiOracle, SiSpring } from "react-icons/si";
+import { motion } from "framer-motion";
 
 function Section4() {
   const items = [
@@ -32,7 +33,7 @@ function Section4() {
           <div className={styles.itemList}>
             {items.map((item, index) => {
               return (
-                <div key={index} className={styles.item}>
+                <motion.div key={index} className={styles.item} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }} viewport={{ amount: 1, once: true }}>
                   <div className={styles.imageBox} style={{ backgroundImage: `url(${item.image})` }}></div>
                   <div className={styles.contentBox}>
                     <div className={styles.itemTitle}>{item.title}</div>
@@ -47,7 +48,7 @@ function Section4() {
                       <div className={styles.github}>
                         {item.url.map((url, index) => {
                           return (
-                            <a key={index} href={url} target='_blank'>
+                            <a key={index} href={url} target='_blank' rel='noreferrer noopener'>
                               <FaGithub />
                             </a>
                           );
@@ -55,7 +56,7 @@ function Section4() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

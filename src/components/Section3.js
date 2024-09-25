@@ -64,7 +64,7 @@ function Section3() {
                 <div className={styles.name}>{iconData.content}</div>
               </div>
               <div className={styles.rightBox}>
-                <motion.div className={styles.bar} initial={{ width: 0 }} whileInView={{ width: iconData.bar }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.2 }}>
+                <motion.div className={styles.bar} initial={{ width: 0 }} whileInView={{ width: iconData.bar }} viewport={{ amount: 1, once: true }} transition={{ duration: 1, delay: 0.2 }}>
                   <motion.span className={styles.proficiency} variants={proVar}>
                     {iconData.bar === "100%" ? "Familiar" : "Tried"}
                   </motion.span>
