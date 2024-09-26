@@ -2,7 +2,7 @@ import { GoMoon, GoSun } from "react-icons/go";
 import styles from "../css/Menu.module.css";
 import { useThemeContext } from "../contexts/ThemeContext";
 
-function Menu({ sec1Ref, sec2Ref, sec3Ref, sec4Ref }) {
+function Menu({ sec1Ref, sec2Ref, sec3Ref, sec4Ref, sec5Ref }) {
   const { theme, setTheme } = useThemeContext();
   const handleThemeChange = (e) => {
     e.stopPropagation();
@@ -28,6 +28,7 @@ function Menu({ sec1Ref, sec2Ref, sec3Ref, sec4Ref }) {
           <li onClick={() => handleClickMenu(sec2Ref)}>About Me</li>
           <li onClick={() => handleClickMenu(sec3Ref)}>Skills</li>
           <li onClick={() => handleClickMenu(sec4Ref)}>Projects</li>
+          <li onClick={() => handleClickMenu(sec5Ref)}>Contact Me</li>
           <li>
             <button className={styles.themeBtn} onClick={handleThemeChange}>
               {theme === "light" ? <GoSun /> : <GoMoon />}

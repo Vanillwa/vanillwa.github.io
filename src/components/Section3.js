@@ -31,7 +31,7 @@ function Section3() {
       scale: 1,
     },
     hover: {
-      scale: 1.05,
+      scale: 1.2,
       transition: {
         duration: 0.3,
         type: "spring",
@@ -58,11 +58,11 @@ function Section3() {
         <div className={styles.title}>Skills</div>
         <div className={styles.itemList}>
           {icons.map((iconData, index) => (
-            <motion.div key={index} className={styles.item} variants={barVar} initial='start' whileHover='hover'>
-              <div className={styles.leftBox}>
+            <motion.div key={index} className={styles.item} initial='start' whileHover='hover'>
+              <motion.div className={styles.leftBox} variants={barVar}>
                 {iconData.icon}
                 <div className={styles.name}>{iconData.content}</div>
-              </div>
+              </motion.div>
               <div className={styles.rightBox}>
                 <motion.div className={styles.bar} initial={{ width: 0 }} whileInView={{ width: iconData.bar }} viewport={{ amount: 1, once: true }} transition={{ duration: 1, delay: 0.2 }}>
                   <motion.span className={styles.proficiency} variants={proVar}>

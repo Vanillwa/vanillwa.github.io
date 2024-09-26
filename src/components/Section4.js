@@ -33,7 +33,7 @@ function Section4() {
           <div className={styles.itemList}>
             {items.map((item, index) => {
               return (
-                <motion.div key={index} className={styles.item} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }} viewport={{ amount: 1, once: true }}>
+                <motion.div key={index} className={styles.item} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }} viewport={{ amount: 0.8, once: true }}>
                   <div className={styles.imageBox} style={{ backgroundImage: `url(${item.image})` }}></div>
                   <div className={styles.contentBox}>
                     <div className={styles.itemTitle}>{item.title}</div>

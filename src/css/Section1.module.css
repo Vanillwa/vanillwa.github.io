@@ -13,7 +13,8 @@
 
 .welcome {
   font-size: 72px;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 3px;
   color: white;
   text-align: center;
   padding: 50px 0 100px;
