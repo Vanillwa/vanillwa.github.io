@@ -5,6 +5,9 @@ import image_gng from "../images/Gang_and_Go.png";
 import { FaGithub, FaNodeJs, FaReact } from "react-icons/fa";
 import { SiJquery, SiMysql, SiOracle, SiSpring } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import ProjectModal from "./ProjectModal";
+import { ModalPortal } from "./ModalPortal";
 
 function Section4() {
   const items = [
@@ -25,6 +28,17 @@ function Section4() {
       url: ["https://github.com/Vanillwa/Gang_and_Go"],
     },
   ];
+
+  const [show, setShow] = useState(false);
+
+  const handleCloseModal = () => {
+    document.body.style.overflow = "";
+    setShow(false);
+  };
+  const handleShowModal = () => {
+    document.body.style.overflow = "hidden";
+    setShow(true);
+  };
   return (
     <>
       <section className={styles.sec}>
@@ -60,6 +74,14 @@ function Section4() {
               );
             })}
           </div>
+          <button type='button' onClick={handleShowModal}>
+            Open
+          </button>
+          {show && (
+            <ModalPortal>
+              <ProjectModal handleCloseModal={handleCloseModal} />
+            </ModalPortal>
+          )}
         </Container>
       </section>
     </>

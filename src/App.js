@@ -5,7 +5,6 @@ import Section2 from "./components/Section2";
 import { motion, stagger, useAnimate, useScroll } from "framer-motion";
 import "./css/App.css";
 import Section3 from "./components/Section3";
-
 import { MenuToggle } from "./components/MenuToggle";
 import Menu from "./components/Menu";
 import Section4 from "./components/Section4";
