@@ -23,22 +23,26 @@
   --color-bg: #222;
   --color-bg-sec3: #181818;
   --color-font: white;
+  --color-font-sub: lightgray;
   --color-nav-bg: #333;
   --color-border: #444;
   --color-bar: linear-gradient(90deg, rgb(61, 61, 61) 0%, rgb(95, 95, 95) 100%);
   --font-title: DungGeunMo;
-  --color-pj: #333;
+  --color-pj: #2b2b2b;
+  --color-scrollbar: gray;
 }
 
 html.light {
   --color-bg: whitesmoke;
   --color-bg-sec3: #eee;
   --color-font: black;
+  --color-font-sub: gray;
   --color-nav-bg: white;
   --color-border: lightgray;
   --color-bar: linear-gradient(90deg, rgb(133, 133, 133) 0%, rgb(194, 194, 194) 100%);
   --font-title: DungGeunMo;
   --color-pj: #eee;
+  --color-scrollbar: #999;
 }
 
 ul,
@@ -49,6 +53,7 @@ li {
 
 a {
   color: var(--color-font);
+  text-decoration: none;
 }
 
 body {

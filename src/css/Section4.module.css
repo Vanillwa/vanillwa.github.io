@@ -31,6 +31,7 @@
   border-radius: 15px;
   overflow: hidden;
   background-color: var(--color-pj);
+  cursor: pointer;
 }
 
 .item:nth-child(even) {
@@ -64,10 +65,12 @@
 
 .itemSubtitle {
   font-size: 21px;
+  font-weight: 600;
 }
 
 .itemTerm {
   font-size: 15px;
+  color: var(--color-font-sub);
 }
 
 .bottomGroup {

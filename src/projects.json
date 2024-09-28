@@ -1,0 +1,22 @@
+[
+  {
+    "image": "image_rut",
+    "title": "R U T?",
+    "subtitle": "mbti 게시판 및 채팅 사이트",
+    "term": "2024/04/15 ~ 2024/06/01",
+    "skills": ["React", "Node.js", "MySQL"],
+    "skillsText": ["React", "Node.js", "MySQL"],
+    "url": ["https://github.com/Vanillwa/mbti-node", "https://github.com/Vanillwa/mbti-react"],
+    "member": "본인 외 4명"
+  },
+  {
+    "image": "image_gng",
+    "title": "나의 펫이 되어줄래 ?",
+    "subtitle": "반려동물 게시판 및 쇼핑몰 사이트",
+    "term": "2023/11/27 ~ 2023/12/18",
+    "skills": ["Spring", "JQuery", "OracleDB"],
+    "skillsText": ["Spring", "JQuery", "OracleDB"],
+    "url": ["https://github.com/Vanillwa/Gang_and_Go"],
+    "member": "본인 외 4명"
+  }
+]
